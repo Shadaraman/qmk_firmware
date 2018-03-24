@@ -34,7 +34,6 @@ enum custom_keycodes {
 #define KC_WINR HYPR(KC_RGHT)
 #define KC_CAD  LCTL(LALT(KC_DEL))
 #define KC_OSFT OSM(MOD_LSFT)
-#define KC_SSFT SFT_T(KC_SPC)
 #define KC_QSFT SFT_T(KC_QUOT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -47,14 +46,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |OShift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Adjust|      | GUI  | Ctrl |Lower |Bksp  |SSpace|Raise | Alt  |      |      |      |
+ * |Adjust|      | GUI  | Ctrl |Lower |Bksp  | Space|Raise | Alt  |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = KEYMAP( \
   KC_GESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
   KC_CTAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QSFT, \
   KC_OSFT,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SSFT, RAISE,   KC_LALT, _______, _______, _______ \
+  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SPC, RAISE,   KC_LALT, _______, _______, _______ \
 ),
 
 /* Colemak (Mod-DH, matrix variant)
@@ -65,14 +64,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |OShift|   Z  |   X  |   C  |   D  |   V  |   M  |   H  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Adjust|      | GUI  | Ctrl |Lower |Bksp  |SSpace|Raise | Alt  |      |      |      |
+ * |Adjust|      | GUI  | Ctrl |Lower |Bksp  | Space|Raise | Alt  |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_COLEMAK] = KEYMAP( \
   KC_GESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC, \
   KC_CTAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_K,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QSFT, \
   KC_OSFT,  KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_M,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SSFT, RAISE,   KC_LALT, _______, _______, _______ \
+  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SPC, RAISE,   KC_LALT, _______, _______, _______ \
 ),
 
 /* Dvorak
@@ -83,14 +82,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |OShift|   ;  |   Q  |   J  |   K  |   X  |   B  |   M  |   W  |   V  |   Z  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Adjust|      | GUI  | Ctrl |Lower |Bksp  |SSpace|Raise | Alt  |      |      |      |
+ * |Adjust|      | GUI  | Ctrl |Lower |Bksp  | Space|Raise | Alt  |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_DVORAK] = KEYMAP( \
   KC_GESC,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSPC, \
   KC_CTAB,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH, \
   KC_OSFT,  KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_ENT , \
-  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SSFT, RAISE,   KC_LALT, _______, _______, _______ \
+  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SPC, RAISE,   KC_LALT, _______, _______, _______ \
 ),
 
 /* Lower
