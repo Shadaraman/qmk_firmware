@@ -41,6 +41,11 @@ enum custom_keycodes {
 #define KC_OSFT OSM(MOD_LSFT)
 #define KC_QSFT SFT_T(KC_QUOT)
 #define NAV MO(_NAV)
+#define KC_CTLZ  LCTL(KC_Z)
+#define KC_CTLC  LCTL(KC_C)
+#define KC_CTLX  LCTL(KC_X)
+#define KC_CTLV  LCTL(KC_V)
+#define KC_CTLY  LCTL(KC_Y)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -154,19 +159,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Nav (Symbol + Number)
  * ,-----------------------------------------------------------------------------------.
- * |      |      |      |      |      |      | PgUp | Home |  Up  | End  | Del  |      |
+ * |      | Esc  |  OS  | Back | Fwd  |WhlUp | PgUp | Home |  Up  | End  | Del  | Ins  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      | Home | PgUp | PgDn | End  |      | PgDn | Left | Down |Right | Ins  |      |
+ * |      | Alt  |  ^Y  |Shift | Ctrl |WhlDn | PgDn | Left | Down |Right | Bspc |Enter |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |      |  ^Z  |  ^X  |  ^C  |  ^V  |  ^V  | Calc | CAD  |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
  * `-----------------------------------------------------------------------------------'
  */
 [_NAV] = KEYMAP( \
-  _______, _______, _______, _______, _______,  _______,  _______,  KC_HOME, KC_UP  , KC_END , KC_DEL,  _______, \
-  _______, KC_HOME, KC_PGUP, KC_PGDN,  KC_END,  _______,  _______,  KC_LEFT, KC_DOWN, KC_RGHT, KC_INS , _______, \
-  _______, _______, _______, _______, _______,  _______,  _______,  _______, _______, _______, _______, _______, \
+  _______, KC_ESC,  KC_LGUI, KC_WBAK, KC_WFWD,  KC_WH_U,  KC_PGUP,  KC_HOME, KC_UP  , KC_END , KC_DEL,  KC_INS, \
+  _______, KC_LALT, KC_CTLY, KC_LSFT, KC_LCTL,  KC_WH_D,  KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC, KC_ENT, \
+  _______, KC_CTLZ, KC_CTLX, KC_CTLC, KC_CTLV,  KC_CTLV,  KC_CALC,  KC_CAD,  _______, _______, _______, _______, \
   _______, _______, _______, _______, _______,  _______,  _______,  _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
 ),
 
