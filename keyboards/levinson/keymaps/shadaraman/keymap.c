@@ -33,10 +33,10 @@ enum custom_keycodes {
 
 // Custom aliases
 #define KC_STAB SFT_T(KC_TAB)
-#define KC_WINL HYPR(KC_LEFT)
-#define KC_WIND HYPR(KC_DOWN)
-#define KC_WINU HYPR(KC_UP)
-#define KC_WINR HYPR(KC_RGHT)
+#define KC_WINL LCTL(LALT(KC_LEFT)
+#define KC_WIND LCTL(LALT(KC_DOWN)
+#define KC_WINU LCTL(LALT(KC_UP)
+#define KC_WINR LCTL(LALT(KC_RGHT)
 #define KC_CAD  LCTL(LALT(KC_DEL))
 #define KC_OSFT OSM(MOD_LSFT)
 #define KC_QSFT SFT_T(KC_QUOT)
@@ -48,36 +48,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * | Gesc |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |Tb/Sft|   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  "   |
+ * | Tab  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  "   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Ctrl |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
+ * |Shift |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Adjust|      | GUI  | Ctrl |Lower |Bksp  | Space|Raise | Alt  |      |      |      |
+ * | Ctrl |Adjust| GUI  | Nav  |Lower |Enter |Space |Raise | Alt  |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = KEYMAP( \
-  KC_GESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
-  KC_STAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QSFT, \
-  KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-  ADJUST,   _______, KC_LGUI, KC_LCTL, LOWER,   KC_BSPC, KC_SPC, RAISE,   KC_LALT, _______, _______, _______ \
+  KC_GESC,  KC_Q,    KC_W,    KC_E,  KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
+  KC_TAB,   KC_A,    KC_S,    KC_D,  KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+  KC_OSFT,  KC_Z,    KC_X,    KC_C,  KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_OSFT, \
+  KC_LCTL,  ADJUST,  KC_LGUI, NAV,   SYMBOL,  KC_ENT,  KC_SPC,  NUMBER,  KC_LALT, _______, _______, _______ \
 ),
 
 /* Colemak (Mod-DH)
  * ,-----------------------------------------------------------------------------------.
  * | Gesc |   Q  |   W  |   F  |   P  |   B  |   J  |   L  |   U  |   Y  |   ;  | Bksp |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |Tb/Sft|   A  |   R  |   S  |   T  |   G  |   K  |   N  |   E  |   I  |   O  |  "   |
+ * | Tab  |   A  |   R  |   S  |   T  |   G  |   K  |   N  |   E  |   I  |   O  |  "   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Ctrl |   Z  |   X  |   C  |   D  |   V  |   M  |   H  |   ,  |   .  |   /  |Enter |
+ * |Shift |   Z  |   X  |   C  |   D  |   V  |   M  |   H  |   ,  |   .  |   /  |Shift |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |Adjust|      | GUI  | Nav  |Lower |Bksp  |Space |Raise | Alt  |      |      |      |
+ * | Ctrl |Adjust| GUI  | Nav  |Lower |Enter |Space |Raise | Alt  |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_COLEMAK] = KEYMAP( \
   KC_GESC,  KC_Q,    KC_W,    KC_F,  KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC, \
-  KC_STAB,  KC_A,    KC_R,    KC_S,  KC_T,    KC_G,    KC_K,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QSFT, \
-  KC_LCTL,  KC_Z,    KC_X,    KC_C,  KC_D,    KC_V,    KC_M,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-  ADJUST,   _______, KC_LGUI, NAV,   NUMBER,  KC_BSPC, KC_SPC,  SYMBOL,  KC_LALT, _______, _______, _______ \
+  KC_TAB,   KC_A,    KC_R,    KC_S,  KC_T,    KC_G,    KC_K,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, \
+  KC_OSFT,  KC_Z,    KC_X,    KC_C,  KC_D,    KC_V,    KC_M,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_OSFT, \
+  KC_LCTL,  ADJUST,  KC_LGUI, NAV,   SYMBOL,  KC_ENT,  KC_SPC,  NUMBER,  KC_LALT, _______, _______, _______ \
 ),
 
 /* Lower
@@ -136,23 +136,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Symbol
  * ,-----------------------------------------------------------------------------------.
- * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Del  |
+ * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  |  |   |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |   \  |   [  |   {  |   (  |      |      |   )  |   }  |   ]  |   |  |      |
+ * |   `  |   =  |   [  |   {  |   (  |  +   |   _  |   )  |   }  |   ]  |   -  |  \   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
+ * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_SYMBOL] = KEYMAP( \
-  KC_TILD, KC_EXLM, KC_AT,   KC_HASH,  KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL, \
-  _______, KC_BSLS, KC_LBRC, KC_LCBR, KC_LPRN, _______, _______, KC_RPRN, KC_RCBR, KC_RBRC, KC_PIPE, _______, \
+  KC_TILD, KC_EXLM, KC_AT,   KC_HASH,  KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE, \
+  KC_GRV, KC_EQL, KC_LBRC, KC_LCBR, KC_LPRN, KC_PLUS, KC_UNDS, KC_RPRN, KC_RCBR, KC_RBRC, KC_MINS, KC_BSLS, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
 ),
 
-/* Nav
+/* Nav (Symbol + Number)
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      | PgUp | Home |  Up  | End  | Del  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -178,14 +178,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      | Prev |      |      | Next |  CAD |      |      |      |      |AGnorm|AGswap|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | Reset|      |      |      |             |      |      |Qwerty|Colemk|      |
+ * |      |      |      |      |      |             |      |      |Qwerty|Colemk|Reset |
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] =  KEYMAP( \
   KC_F12 , KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , \
   _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY, KC_SLEP, KC_CALC, KC_WINL, KC_WIND, KC_WINU, KC_WINR, _______, \
   _______, KC_MPRV, _______, _______, KC_MNXT, KC_CAD , _______, _______, _______, _______, AG_NORM, AG_SWAP, \
-  _______, RESET,   _______, _______, _______, _______, _______, _______, _______, QWERTY , COLEMAK, _______ \
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, QWERTY , COLEMAK, RESET \
 )
 
 
