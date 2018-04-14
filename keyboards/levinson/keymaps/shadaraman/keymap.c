@@ -33,10 +33,10 @@ enum custom_keycodes {
 
 // Custom aliases
 #define KC_STAB SFT_T(KC_TAB)
-#define KC_WINL LCTL(LALT(KC_LEFT)
-#define KC_WIND LCTL(LALT(KC_DOWN)
-#define KC_WINU LCTL(LALT(KC_UP)
-#define KC_WINR LCTL(LALT(KC_RGHT)
+#define KC_WINL LCTL(LALT(KC_LEFT))
+#define KC_WIND LCTL(LALT(KC_DOWN))
+#define KC_WINU LCTL(LALT(KC_UP))
+#define KC_WINR LCTL(LALT(KC_RGHT))
 #define KC_CAD  LCTL(LALT(KC_DEL))
 #define KC_OSFT OSM(MOD_LSFT)
 #define KC_QSFT SFT_T(KC_QUOT)
